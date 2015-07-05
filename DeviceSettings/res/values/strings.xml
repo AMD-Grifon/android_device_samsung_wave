@@ -14,6 +14,10 @@
     <string name="mdnie_title_head">mDNIe Mode</string>
     <string name="mdnie_summary_head">Adjust mDNIe display post-processing</string>
 
+    <string name="category_bigmem_title">Bigmem</string>
+    <string name="bigmem_title_head">Bigmem</string>
+    <string name="bigmem_summary_head">Enable or disable Bigmem which breaks 720p video recording</string>
+
     <string name="category_volume_boost_title">Volume Controls</string>
     <string name="volume_boost_title_head">In-Call Volume Controls</string>
     <string name="volume_boost_summary_head">Boost in-call volume settings</string>
