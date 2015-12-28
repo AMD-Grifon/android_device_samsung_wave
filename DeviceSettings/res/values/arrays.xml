@@ -30,12 +30,14 @@
 
     <string-array name="bigmem_entries">
         <item>Disabled (Default)</item>
-        <item>Enabled</item>
+        <item>Bigmem (breaks 720p recording)</item>
+        <item>Max Ram (breaks camera)</item>
     </string-array>
 
     <string-array name="bigmem_entries_values" translatable="false">
         <item>0</item>
-        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="tvout_system_entries_values" translatable="false">
@@ -44,3 +46,4 @@
     </string-array>
 
 </resources>
+
