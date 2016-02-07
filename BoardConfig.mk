@@ -143,6 +143,9 @@ endif
 # Use dlmalloc instead of jemalloc for mallocs on low-ram target kernels
 MALLOC_IMPL := dlmalloc
 
+# Use longer timeouts for slow CPU
+TARGET_NEEDS_LONG_TIMEOUTS := true
+
 # Hardware rendering
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/samsung/wave/prebuilt/egl.cfg
