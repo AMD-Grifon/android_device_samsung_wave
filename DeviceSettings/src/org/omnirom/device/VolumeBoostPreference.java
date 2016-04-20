@@ -82,7 +82,7 @@ public class VolumeBoostPreference extends DialogPreference implements OnClickLi
     private static final int BOOST_DEFAULT_VALUE = 0;
     private static final int BOOST_MAX_VALUE = 3;
 
-    private static final int MIC_DEFAULT_VALUE = 18;
+    private static final int MIC_DEFAULT_VALUE = 0;
     private static final int MIC_MAX_VALUE = 31;
 
     // Track instances to know when to restore original value
