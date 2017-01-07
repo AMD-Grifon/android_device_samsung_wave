@@ -213,6 +213,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags "--compiler-filter=interpret-only" \
     dalvik.vm.image-dex2oat-flags "" \
     dalvik.vm.profiler=1 \
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
     dalvik.vm.isa.arm.features=lpae
 
 # Reduce background apps limit to 12 on low-tier devices
