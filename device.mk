@@ -209,11 +209,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ART parameters
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags "--compiler-filter=interpret-only" \
-    dalvik.vm.image-dex2oat-flags "" \
-    dalvik.vm.profiler=1 \
-    dalvik.vm.dex2oat-flags=--no-watch-dog \
-    dalvik.vm.isa.arm.features=lpae
+    dalvik.vm.dex2oat-Xms=8m \
+    dalvik.vm.dex2oat-Xmx=96m \
+    dalvik.vm.image-dex2oat-Xms=48m \
+    dalvik.vm.image-dex2oat-Xmx=48m \
+    dalvik.vm.dex2oat-filter=interpret-only \
+    dalvik.vm.image-dex2oat-filter=interpret-only \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
+
+PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
+    --compiler-filter=interpret-only
 
 # Force dex2oat to not use swap file
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -232,6 +237,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
 include frameworks/native/build/phone-hdpi-dalvik-heap.mk
+
+$(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
