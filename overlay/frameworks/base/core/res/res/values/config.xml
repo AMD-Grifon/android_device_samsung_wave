@@ -136,6 +136,11 @@
     -->
     <integer name="config_longPressOnHomeBehavior">1</integer>
 
+    <!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable
+           in the kernel. Default is 3 full-screen 32 bpp buffers, i.e. 4500KB
+           on Galaxy S. Let's double this value. -->
+    <integer name="config_extraFreeKbytesAbsolute">9000</integer>
+
     <!-- Global action menu -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
