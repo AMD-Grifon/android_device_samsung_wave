@@ -139,6 +139,8 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
+    WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+    DONT_DEXPREOPT_PREBUILTS := true
 endif
 
 # Use dlmalloc instead of jemalloc for mallocs on low-ram target kernels
