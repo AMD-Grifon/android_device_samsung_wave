@@ -189,7 +189,7 @@ BOARD_SCREENRECORD_LANDSCAPE_ONLY := true
 -include device/samsung/wave/Android.mk
 
 # TWRP Flags
-DEVICE_RESOLUTION := 480x800
+TW_THEME := portrait_hdpi
 TW_NO_BATT_PERCENT := true
 TW_NO_REBOOT_BOOTLOADER := true
 RECOVERY_SDCARD_ON_DATA := true
