@@ -193,7 +193,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Reduce background apps limit to 12 on low-tier devices
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.fw.bg_apps_limit=12
+    ro.sys.fw.bg_apps_limit=8
 
 # Set max background services
 PRODUCT_PROPERTY_OVERRIDES += \
