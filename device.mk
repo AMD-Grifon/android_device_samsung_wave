@@ -45,7 +45,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES := \
 	device/samsung/wave/prebuilt/asound.conf:system/etc/asound.conf \
 	device/samsung/wave/libaudio/audio_policy.conf:system/etc/audio_policy.conf \
-	device/samsung/wave/prebuilt/egl.cfg:system/lib/egl/egl.cfg \
 	device/samsung/wave/prebuilt/nvram_net_s8500.txt:system/vendor/firmware/nvram_net_s8500.txt \
 	device/samsung/wave/prebuilt/nvram_net_s8530.txt:system/vendor/firmware/nvram_net_s8530.txt \
 	device/samsung/wave/prebuilt/bcm4329_s8500.hcd:system/vendor/firmware/bcm4329_s8500.hcd \
@@ -130,6 +129,7 @@ PRODUCT_PACKAGES += \
 
 # PVR
 PRODUCT_PACKAGES += \
+	libEGL_POWERVR \
 	pvrsrvinit
 
 # Libs

@@ -151,7 +151,6 @@ TARGET_NEEDS_LONG_TIMEOUTS := true
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/wave/prebuilt/egl.cfg
 BOARD_EGL_SYSTEMUI_PBSIZE_HACK := true
 
 # OMX buffer reallocate
