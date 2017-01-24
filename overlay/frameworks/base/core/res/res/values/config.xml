@@ -145,6 +145,8 @@
          memory over what the kernel keeps by default.  -1 keeps the default. -->
     <integer name="config_extraFreeKbytesAbsolute">3072</integer>
 
+    <integer name="config_lowMemoryKillerMinFreeKbytesAdjust">1024</integer>
+
     <!-- Global action menu -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>

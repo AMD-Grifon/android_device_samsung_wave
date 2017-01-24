@@ -182,6 +182,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
 	rild.libpath=/system/lib/libmocha-ril.so \
 	ro.telephony.ril.config=signalstrength \
+	ro.ril.hsxpa=1 \
+	ro.ril.hsdpa.category=8 \
+	ro.ril.hsupa.category=6 \
+	ro.ril.gprsclass=10 \
+	ro.ril.enable.amr.wideband=1 \
 	ro.sf.lcd_density=240 \
 	ro.bq.gpu_to_cpu_unsupported=1 \
 	ro.config.low_ram=true \
@@ -211,12 +216,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ART parameters
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-Xms=8m \
-    dalvik.vm.dex2oat-Xmx=96m \
-    dalvik.vm.image-dex2oat-Xms=48m \
-    dalvik.vm.image-dex2oat-Xmx=48m \
+    dalvik.vm.dex2oat-Xms=6m \
+    dalvik.vm.dex2oat-Xmx=72m \
+    dalvik.vm.image-dex2oat-Xms=36m \
+    dalvik.vm.image-dex2oat-Xmx=36m \
     dalvik.vm.dex2oat-filter=interpret-only \
-    dalvik.vm.image-dex2oat-filter=interpret-only \
+    dalvik.vm.image-dex2oat-filter=speed \
     dalvik.vm.dexopt-flag=o=y,m=y \
     dalvik.vm.dex2oat-flags=--no-watch-dog
 
