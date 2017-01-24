@@ -147,6 +147,28 @@
 
     <integer name="config_lowMemoryKillerMinFreeKbytesAdjust">1024</integer>
 
+    <!-- The default journal mode to use use when Write-Ahead Logging is not active.
+         Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
+         PERSIST may improve performance by reducing how often journal blocks are
+         reallocated (compared to truncation) resulting in better data block locality
+         and less churn of the storage media. -->
+    <string name="db_default_journal_mode">MEMORY</string>
+
+    <!-- The database synchronization mode when using the default journal mode.
+         FULL is safest and preserves durability at the cost of extra fsyncs.
+         NORMAL also preserves durability in non-WAL modes and uses checksums to ensure
+         integrity although there is a small chance that an error might go unnoticed.
+         Choices are: FULL, NORMAL, OFF. -->
+    <string name="db_default_sync_mode">NORMAL</string>
+
+    <!-- The database synchronization mode when using Write-Ahead Logging.
+         FULL is safest and preserves durability at the cost of extra fsyncs.
+         NORMAL sacrifices durability in WAL mode because syncs are only performed before
+         and after checkpoint operations.  If checkpoints are infrequent and power loss
+         occurs, then committed transactions could be lost and applications might break.
+         Choices are: FULL, NORMAL, OFF. -->
+    <string name="db_wal_sync_mode">NORMAL</string>
+
     <!-- Global action menu -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
