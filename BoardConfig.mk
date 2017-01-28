@@ -32,9 +32,6 @@ BOARD_USES_GENERIC_AUDIO := false
 AUDIO_FEATURE_ENABLED_INCALL_MUSIC := false
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
 
-BOARD_NO_PAGE_FLIPPING := false
-BOARD_NO_32BPP := false
-
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -49,6 +46,7 @@ KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(strip $(HOST_OS))-x86/
 # Bionic stuff
 BOARD_USES_LEGACY_MMAP := true
 TARGET_ENABLE_NON_PIE_SUPPORT := true
+TARGET_NEEDS_BIONIC_PRELINK_SUPPORT := true
 TARGET_NEEDS_BIONIC_MD5 := true
 
 TARGET_NO_BOOTLOADER := true
@@ -142,6 +140,9 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT_BOOT_IMG_ONLY := true
     DONT_DEXPREOPT_PREBUILTS := true
 endif
+
+# Dalvik startup with low memory footprint
+TARGET_ARCH_LOWMEM := true
 
 # Use dlmalloc instead of jemalloc for mallocs on low-ram target kernels
 MALLOC_IMPL := dlmalloc
