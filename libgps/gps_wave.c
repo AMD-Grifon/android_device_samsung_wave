@@ -17,6 +17,7 @@
 
 #include <fcntl.h>
 #include <hardware/gps.h>
+#include <hardware/power.h>
 #include <secril-client.h>
 #include <samsung-ril-socket.h>
 #include <stdio.h>
