@@ -226,6 +226,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     	ro.kernel.android.checkjni=0 \
     	dalvik.vm.checkjni=false
 
+# Strict mode disabled
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.strictmode.disable=1 \
+    persist.sys.strictmode.visual=0
+
 # ART parameters
 PRODUCT_PROPERTY_OVERRIDES += \
     	dalvik.vm.dex2oat-filter=interpret-only \
