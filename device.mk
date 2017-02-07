@@ -196,8 +196,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=240 \
 	ro.bq.gpu_to_cpu_unsupported=1 \
 	ro.config.low_ram=true \
+	ro.telephony.call_ring.delay=0 \
+	debug.composition.type=dyn \
+	pm.sleep_mode=1 \
 	persist.sys.force_highendgfx=true \
-	ro.vold.umsdirtyratio=20 \
 	persist.sys.purgeable_assets=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
