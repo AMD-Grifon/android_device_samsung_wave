@@ -159,9 +159,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
        wifi.interface=wlan0 \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
        rild.libpath=/system/lib/libmocha-ril.so \
+       ro.ril.hsxpa=1 \
+       ro.ril.hsdpa.category=8 \
+       ro.ril.hsupa.category=6 \
+       ro.ril.gprsclass=10 \
+       ro.telephony.call_ring.delay=0 \
        ro.sf.lcd_density=240 \
        ro.bq.gpu_to_cpu_unsupported=1 \
        ro.config.low_ram=true \
+       persist.sys.purgeable_assets=1
 
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
