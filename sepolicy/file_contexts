@@ -25,7 +25,7 @@
 /sys/class/misc/pwm_duty/pwm_duty                   u:object_r:sysfs_writable:s0
 /sys/class/mdnieset_ui/switch_mdnieset_ui/mdnieset_ui_file_cmd  u:object_r:sysfs_writable:s0
 /sys/class/misc/dockaudio/(.*)_enable               u:object_r:sysfs_writable:s0
-/sys/devices/virtual/misc/color_tuning/(.*)         u:object_r:sysfs_writable:s0
+/sys/devices/virtual/misc/voodoo_color/(.*)         u:object_r:sysfs_writable:s0
 /sys/devices/virtual/misc/voodoo_sound/(.*)         u:object_r:sysfs_writable:s0
 /sys/kernel/bigmem/enable                           u:object_r:sysfs_writable:s0
 
