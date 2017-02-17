@@ -43,6 +43,9 @@ TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.9
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 
+# Dalvik startup with low memory footprint
+TARGET_ARCH_LOWMEM := true
+
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
