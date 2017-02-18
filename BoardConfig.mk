@@ -36,6 +36,7 @@ BOARD_NO_32BPP := false
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a8
+ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a8
@@ -60,6 +61,9 @@ TARGET_KERNEL_SOURCE := kernel/samsung/aries
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/wave
+
+# Fonts
+SMALLER_FONT_FOOTPRINT := true
 
 # Camera
 USE_CAMERA_STUB := false
