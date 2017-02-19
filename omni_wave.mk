@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Bootanimation resolution
-TARGET_BOOTANIMATION_SIZE := 420x280
+# Low-FPS Bootanimation
+USE_LOWFPS_BOOTANI := true
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
