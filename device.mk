@@ -259,7 +259,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     	persist.sys.usb.config=mtp
 
-include frameworks/native/build/phone-hdpi-dalvik-heap.mk
+include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 
 $(call add-product-dex-preopt-module-config,services,--compiler-filter=speed)
 
