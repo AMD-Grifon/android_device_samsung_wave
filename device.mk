@@ -198,7 +198,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.config.low_ram=true \
 	ro.telephony.call_ring.delay=0 \
 	debug.composition.type=dyn \
-	pm.sleep_mode=1 \
+	persist.sys.ui.hw=1 \
 	persist.sys.force_highendgfx=true \
 	persist.sys.purgeable_assets=1
 
@@ -235,9 +235,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ART parameters
 PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dex2oat-Xms=6m \
+	dalvik.vm.dex2oat-Xmx=72m \
+	dalvik.vm.image-dex2oat-Xms=36m \
+	dalvik.vm.image-dex2oat-Xmx=36m \
     	dalvik.vm.dex2oat-filter=interpret-only \
     	dalvik.vm.image-dex2oat-filter=speed \
-    	dalvik.vm.dexopt-flag=o=y,m=y \
     	dalvik.vm.dex2oat-flags=--no-watch-dog
 
 PRODUCT_DEX_PREOPT_DEFAULT_FLAGS := \
