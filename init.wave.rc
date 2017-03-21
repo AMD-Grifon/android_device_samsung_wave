@@ -81,12 +81,6 @@ on fs
     mount_all fstab.wave
     swapon_all fstab.wave
 
-# symlinks for samsung RIL
-    mkdir /data/radio
-    chown radio radio /data/radio
-    chmod 0775 /data/radio
-    restorecon_recursive /data/radio
-
     setprop ro.crypto.fuse_sdcard true
 
 # Permissions for MTP device node
@@ -179,6 +173,12 @@ on fs
 
 on post-fs
     mkdir /data/media 0770 media_rw media_rw
+
+# symlinks for samsung RIL
+    mkdir /data/radio
+    chown radio radio /data/radio
+    chmod 0775 /data/radio
+    restorecon_recursive /data/radio
 
 # allow system to modify cpufreq control files
     chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
